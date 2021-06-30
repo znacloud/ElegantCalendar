@@ -128,7 +128,8 @@ private struct CalendarAccessoryView: View, MonthlyCalendarManagerDirectAccess {
 
     var body: some View {
         VStack {
-            selectedDayInformationView
+            //znacloud-don't show
+            //selectedDayInformationView
             GeometryReader { geometry in
                 self.datasource?.calendar(viewForSelectedDate: self.selectedDate!,
                                           dimensions: geometry.size)
