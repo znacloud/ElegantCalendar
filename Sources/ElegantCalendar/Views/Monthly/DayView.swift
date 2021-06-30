@@ -44,7 +44,8 @@ struct DayView: View, MonthlyCalendarManagerDirectAccess {
             .background(backgroundColor)
             .clipShape(Circle())
             .opacity(opacity)
-            .overlay(isSelected ? CircularSelectionView() : nil)
+            //znacloud-Don't use overlay
+            //.overlay(isSelected ? CircularSelectionView() : nil)
             .onTapGesture(perform: notifyManager)
     }
 
