@@ -9,6 +9,9 @@ public protocol MonthlyCalendarDataSource {
     func calendar(backgroundColorOpacityForDate date: Date) -> Double
     func calendar(canSelectDate date: Date) -> Bool
     func calendar(viewForSelectedDate date: Date, dimensions size: CGSize) -> AnyView
+    
+    func calendar(textColorForDate date: Date) -> Color
+    func backgroundForToday() -> AnyView
 
 }
 
@@ -22,6 +25,12 @@ public extension MonthlyCalendarDataSource {
     func calendar(viewForSelectedDate date: Date, dimensions size: CGSize) -> AnyView {
         EmptyView().erased
     }
+    
+    func calendar(textColorForDate date: Date) -> Color { Color.primary }
+    func backgroundForToday() -> AnyView {
+        Color.primary.erased
+    }
+    
 
 }
 
