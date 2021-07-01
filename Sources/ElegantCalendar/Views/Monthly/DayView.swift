@@ -40,7 +40,7 @@ struct DayView: View, MonthlyCalendarManagerDirectAccess {
         Text(numericDay)
             .font(.footnote)
             .foregroundColor(foregroundColor)
-            .frame(width: CalendarConstants.Monthly.dayWidth, height: CalendarConstants.Monthly.dayWidth)
+            .frame(width: CalendarConstants.Monthly.dayWidth, height: CalendarConstants.Monthly.dayWidth * 0.75)
             .background(backgroundColor)
             .clipShape(Circle())
             .opacity(opacity)
